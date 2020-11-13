@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  width: 50vw;
+  height: auto;
+  background: rgb(255, 194, 204);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid rgb(252, 150, 167);
+}
+.accordian {
+  border-bottom: 2px solid rgb(252, 150, 167);
+}
+.accordian:last-of-type {
+  border-bottom: 0px;
+}
+.menu {
+  background: rgb(245, 79, 106);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  position: relative;
+  transition: 300ms ease all;
+  cursor: pointer;
+}
+.menu:hover,
+.menu.active {
+  background: rgb(229 48 78);
+}
+.menu h4 {
+  font-weight: 700;
+}
+.icon {
+  background: rgb(255, 156, 172);
+  border: 0;
+  outline: none;
+  padding: 0px 14px;
+  font-size: 2.3rem;
+  color: white;
+  position: absolute;
+  right: 1rem;
+  bottom: 9px;
+  transition: 300ms ease all;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 4px;
+}
+.icon:hover {
+  background: rgb(201 29 57 / 70%);
+}
+.menu-content {
+  padding: 1rem;
+  color: rgb(90, 80, 80);
+}
+/* hide text */
+.minus-icon,
+.menu-content {
+  display: none;
+}
+.active .menu-content,
+.active .minus-icon {
+  display: block;
+}
+.active .plus-icon {
+  display: none;
+}
